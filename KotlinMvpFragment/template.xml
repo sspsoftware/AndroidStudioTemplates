@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<template
+    format="4"
+    revision="1"
+    name="Kotlin MVP Fragment"
+    description="Kotlin MVP Activity view">
+
+    <category value="Kotlin Dagger MVP" />
+
+    <parameter
+        id="moduleName"
+        name="Module Name"
+        type="string"
+        constraints="class|nonempty"
+        default="Blank"
+        help="The name of the module to create" />
+
+    <parameter
+        id="includeLayout"
+        name="Create layout XML?"
+        type="boolean"
+        default="true"
+        help="Generate a layout XML for the module" />        
+
+    <parameter
+        id="layoutName"
+        name="Module Layout Name"
+        type="string"
+        constraints="layout|nonempty|unique"
+        default="activity_blank"
+        visibility="includeLayout"
+        suggest="fragment_${classToResource(moduleName)}"
+        help="The name of the layout to create" />    
+    
+    <parameter
+        id="subPackage"
+        name="Sub package"
+        type="string"
+        constraints="nonempty"
+        default="blank"
+        suggest="${moduleName?lower_case}"
+        help="Module sub package" />
+
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+
+</template>
