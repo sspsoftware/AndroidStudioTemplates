@@ -1,13 +1,13 @@
 package ${packageName}.${subPackage}
 
 import ${applicationPackage}.di.AppComponent
-import ${applicationPackage}.di.scopes.LifeScope
+import ${applicationPackage}.di.scopes.LifetimeScope
 import dagger.Binds
 import dagger.Component
 import dagger.Module
 import dagger.Provides
 
-@LifeScope
+@LifetimeScope
 @Component(modules = arrayOf(${moduleName}Module::class), dependencies = arrayOf(AppComponent::class))
 interface ${moduleName}Component {
     fun inject(${moduleNameCamelCase}Fragment: ${moduleName}Fragment)
@@ -25,7 +25,7 @@ class ${moduleName}Module(val ${moduleNameCamelCase}View: I${moduleName}View) {
     interface Declarations {
 
         @Binds
-        @LifeScope
+        @LifetimeScope
         fun bind${moduleName}Presenter(${moduleNameCamelCase}Presenter: ${moduleName}Presenter): I${moduleName}Presenter
     }
 }

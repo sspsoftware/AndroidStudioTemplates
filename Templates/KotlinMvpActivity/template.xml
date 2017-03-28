@@ -39,7 +39,7 @@
         default="activity_blank"
         visibility="includeLayout"
         suggest="activity_${classToResource(moduleName)}"
-        help="The name of the layout to create" />    
+        help="The name of the layout to create" />
 
     <globals file="globals.xml.ftl" />
     <execute file="recipe.xml.ftl" />

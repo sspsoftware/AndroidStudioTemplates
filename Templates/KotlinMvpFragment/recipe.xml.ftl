@@ -9,21 +9,21 @@
     </#if>
 
     <instantiate from="src/app_package/blank/BlankFragment.kt.ftl"
-                   to="${escapeXmlAttribute(srcOut)}/${subPackage}/${moduleName}Fragment.kt" />
+                   to="${escapeXmlAttribute(kotlinOut)}/${subPackage}/${moduleName}Fragment.kt" />
 				   
-	<open file="${escapeXmlAttribute(srcOut)}/${subPackage}/${moduleName}Fragment.kt" />
+	<open file="${escapeXmlAttribute(kotlinOut)}/${subPackage}/${moduleName}Fragment.kt" />
 	
 	<instantiate from="src/app_package/blank/BlankPresenter.kt.ftl"
-                   to="${escapeXmlAttribute(srcOut)}/${subPackage}/${moduleName}Presenter.kt" />
+                   to="${escapeXmlAttribute(kotlinOut)}/${subPackage}/${moduleName}Presenter.kt" />
 				   
-	<open file="${escapeXmlAttribute(srcOut)}/${subPackage}/${moduleName}Presenter.kt" />
+	<open file="${escapeXmlAttribute(kotlinOut)}/${subPackage}/${moduleName}Presenter.kt" />
 	
 	<instantiate from="src/app_package/blank/BlankContract.kt.ftl"
-                   to="${escapeXmlAttribute(srcOut)}/${subPackage}/${moduleName}Contract.kt" />
+                   to="${escapeXmlAttribute(kotlinOut)}/${subPackage}/${moduleName}Contract.kt" />
 				   
-	<open file="${escapeXmlAttribute(srcOut)}/${subPackage}/${moduleName}Contract.kt" />
+	<open file="${escapeXmlAttribute(kotlinOut)}/${subPackage}/${moduleName}Contract.kt" />
 	
 	<instantiate from="src/app_package/blank/BlankAssembly.kt.ftl"
-                   to="${escapeXmlAttribute(srcOut)}/${subPackage}/${moduleName}Assembly.kt" />
+                   to="${escapeXmlAttribute(kotlinOut)}/${subPackage}/${moduleName}Assembly.kt" />
 	
 </recipe>

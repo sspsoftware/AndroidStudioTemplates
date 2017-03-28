@@ -4,7 +4,7 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.software.ssp.ambassador.R
+import ${applicationPackage}.R
 import kotlinx.android.synthetic.main.${itemLayoutName}.view.*
 
 
@@ -26,6 +26,7 @@ class ${moduleName}Adapter(val models: List<${viewModelName}>, val onClick: ((${
     class ViewHolder(itemView: View, val onClick: ((${viewModelName}) -> Unit)?) : RecyclerView.ViewHolder(itemView) {
         fun bindModel(${viewModelNameCamelCase}: ${viewModelName}) {
             itemView.apply {
+				//TODO init views
             }
         }
     }
