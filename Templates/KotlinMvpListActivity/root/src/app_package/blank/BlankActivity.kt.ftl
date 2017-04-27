@@ -27,7 +27,7 @@ class ${moduleName}Activity : BaseListActivity<${viewModelName}>(), I${moduleNam
     override fun resolveDependencies(appComponent: AppComponent) {
         Dagger${moduleName}Component.builder()
                 .appComponent(appComponent)
-                .${viewModelNameCamelCase}Module(${moduleName}Module(this))
+                .${moduleNameCamelCase}Module(${moduleName}Module(this))
                 .build()
                 .inject(this)
     }

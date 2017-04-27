@@ -27,7 +27,7 @@ class ${moduleName}Fragment : BaseListFragment<${viewModelName}>(), I${moduleNam
     override fun injectDependencies(appComponent: AppComponent) {
         Dagger${moduleName}Component.builder()
                 .appComponent(appComponent)
-                .${viewModelNameCamelCase}Module(${moduleName}Module(this))
+                .${moduleNameCamelCase}Module(${moduleName}Module(this))
                 .build()
                 .inject(this)
     }

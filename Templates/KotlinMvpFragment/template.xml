@@ -36,9 +36,9 @@
         name="Module Layout Name"
         type="string"
         constraints="layout|nonempty|unique"
-        default="activity_blank"
+        default="fragment_blank"
         visibility="includeLayout"
-        suggest="activity_${classToResource(moduleName)}"
+        suggest="fragment_${classToResource(moduleName)}"
         help="The name of the layout to create" />    
 
     <globals file="globals.xml.ftl" />
